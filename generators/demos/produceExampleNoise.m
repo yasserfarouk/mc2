@@ -1,0 +1,12 @@
+randPP=0.8;
+M=[2,3,6;3,5,5;4,6,11;5,1,4;3,7,10];
+[X,Y,P,t,d]=produce(10,30,M); X=X-0.5*randPP+randPP*rand(size(X)); Y=Y-0.5*randPP+randPP*rand(size(Y));  subplot(2,1,1); plot(X); subplot(2,1,2); plot(Y); 
+savefig('./Data/exampleN','png', '-rgb', '-c0.1', '-r250');
+%copyfile('exampleN.png','C:\Users\yasser\Research\Papers\Mypapers\_current\IntelligentSystemsKnowldgeBook\exampleN.png');
+E=zeros(size(M,1),3);
+E(:,1)=1:size(M,1);
+E(:,2)=M(:,1);
+E(:,3)=M(:,2);
+grPlot([],E,'d','%d','%d');
+savefig('./Data/exampleGraphN','png', '-rgb', '-c0.1', '-r250');
+%copyfile('exampleGraphN.png','C:\Users\yasser\Research\Papers\Mypapers\_current\IntelligentSystemsKnowldgeBook\exampleGraphN.png');

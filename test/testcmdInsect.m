@@ -1,0 +1,8 @@
+d=csvread('./Data/insect15.txt');
+%d=x;
+c=cpd(d,8,10);
+candLocs=findLocsTh(c,0.008);
+[locs,means,stats,maxSmallDist,minLargeDist] =sdCMD(c,[400,700],candLocs);
+[locsF,meansF,statsF] = mdFinalize(d',[400,700],candLocs,locs,means,stats);
+
+showMDResults(locs,means,stats,2,2);
