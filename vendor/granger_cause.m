@@ -25,7 +25,7 @@ function [F,c_v,x_lag,y_lag,T] = granger_cause(x,y,alpha,max_lag)
 
 % References:
 % [1] Granger, C.W.J., 1969. "Investigating causal relations by econometric
-%     models and cross-spectral methods". Econometrica 37 (3), 424–438.
+%    models and cross-spectral methods". Econometrica 37 (3), 424–438.
 
 % Acknowledgements:
 %   I would like to thank Mads Dyrholm for his helpful comments and

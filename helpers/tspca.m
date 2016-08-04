@@ -1,3 +1,15 @@
+% This file is a part of the MC2 toolbox developed by Y. Mohammand and T. Nishida.
+%Please do not remove this comment
+%
+% Using this file is governed by the license of MC2 which you can find in LICENSE.md
+% 
+% You can find more information about this toolbox here:
+% - Yasser Mohammad and Toyoaki Nishida, "MC2: An Integrated Toolbox for Change, Causality, 
+%   and Motif Discovery", 29th International Conference on Industrial, Engineering & 
+%   Other Applications of Applied Intelligent Systems (IEA/AIE) 2016, pp. 128 -- 141.
+% - Yasser Mohammad and Toyoaki Nishida, "Data Mining for Social Robotics", Springer 2016.
+%
+
 function [r,u,s]=tspca(x,varargin)
 % converts an M dimensional time series into a 1 dimensional time series by
 % applying PCA to it. We assume that each dimension is along a row which
