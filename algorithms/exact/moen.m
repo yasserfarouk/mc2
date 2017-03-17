@@ -118,7 +118,8 @@ function [locs,dists,executionTime,means,stats]=moen(x,lrange,lStep,normalizatio
     p=sprintf('%s\\bin',p);
     cd(p);
     csvwrite(strcat(p,'/tmpMKData.csv'),x);
-    str=sprintf('Moen.exe tmpMKData.csv %d %d %d %d %f', ...
+    str=sprintf('%s tmpMKData.csv %d %d %d %d %f', ...
+        executableName('Moen'), ...
         length(x),lrange(1),lrange(2),nMotifs,outerOverlap);
     strt=tic;
     [s,result]=system(str);    
