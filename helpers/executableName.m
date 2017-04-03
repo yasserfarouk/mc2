@@ -3,9 +3,9 @@ function [ fullName ] = executableName( baseName )
 %   
 
 if ispc()
-    fullName = strcat(baseName, '.exe');
+    fullName = strcat('./', strcat(baseName, '.exe'));
 elseif ismac()
-    fullName = strcat(baseName, '.mac');
+    fullName = strcat('./', strcat(baseName, '.mac'));
 elseif isunix()
     fullName = baseName;
 end

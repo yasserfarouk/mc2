@@ -60,7 +60,9 @@ for p=1:nPages
     figs{p}=figure;
     set(gcf,'units','normalized','outerposition',[0 0 1 1]);                
     if showTitle
-        suptitle(sprintf('%s %d of %d',figTitle,p,nPages));
+        if exist('suptitle')
+            suptitle(sprintf('%s %d of %d',figTitle,p,nPages));
+        end
     end
     if showLocsInOriginal
         subplot(nRows+1,nCols,nRows*nCols+1:nRows*nCols+nCols);
