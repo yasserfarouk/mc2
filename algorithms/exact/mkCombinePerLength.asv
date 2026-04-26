@@ -1,0 +1,25 @@
+function [ locsF,meansF,statsF ] = mkCombinePerLength(x, locs)
+%Combines the results of MK algorithm runs into sets of motifs
+%   Assumes that every pair in the input is of the same length
+%   This is true for all MK based algorithms
+
+locsM=cell2mat(locs);
+lengths=locsM(:,2)-locsM(:,1)+1;
+[lengths,I]=sort(lengths);
+locsM=locsM(I,:);
+ls=sort(unique(lengths),'descend');
+n=numel(ls);
+locsF=cell(0,1);
+meansF=cell(0,1);
+statsF=cell(0,1);
+for i=1:n
+    %thisLength=find();
+    [lf,mf,sf]=mkCombine(x,locsM(lengths==ls(i),:),ls(i));
+    locsF=[locsF;lf];
+    if nargout>1
+        meansF=[meansF,mf];
+        if nargout>2
+            statsF=[statsF;sf];
+        end
+    end
+end
